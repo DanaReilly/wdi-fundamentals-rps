@@ -21,35 +21,33 @@ function randomPlay() {
 /*           Write Your Code Below            */
 ////////////////////////////////////////////////
 
-function getPlayerMove(move) {
-    // If a move is given, your expression should evaluate to that move.
-    // If move is not specified / is null, your expression should run getInput()
-    return /* Your Expression */;
-}
+var compare = function(choice1, choice2) {
+    if (choice1===choice2) {
+        console.log("Neither player has won the game!");
+    } else if (choice1==="rock") {
+        if (choice2==="scissors") {
+            console.log("rock wins");
+        }
+        else {
+            console.log("paper wins");
+        }
+    } else if (choice1==="paper") {
+        if (choice2==="rock") {
+            console.log("paper wins");
+        }
+        else {
+            console.log("scissors wins");
+        } 
+    } else if (choice1==="scissors") {
+        if (choice2==="rock") {
+            console.log("rock wins");
+        }
+        else {
+            console.log("scissors wins");
+        } 
+    }
+};
 
-function getComputerMove(move) {
-    // If a move is given, your expression should evaluate to that move.
-    // If move is not specified / is null, your expression should run randomPlay()
-    return /* Your Expression */;
-}
+playGame();
 
-function getWinner(playerMove,computerMove) {
-    // This function should either give us back 'player', 'computer', or 'tie'.
-    // The rules of the game are that rock beats scissors, scissors beats paper, and paper beats rock.
-    // Assume that the only possible input values we can get are 'rock', 'paper', and 'scissors'.
-
-}
-
-function playToFive() {
-    console.log("Let's play Rock Paper Scissors");
-    var playerWins = 0;
-    var computerWins = 0;
-    // This function should continue to play Rock Paper Scissors until either the player or the computer has won five times.
-
-    // After each 'round', display some text in the console indicating who played what, who won, and what the current scoreboard looks like.
-    // For example,
-    //  console.log("Player chose " + playerMove + " while Computer chose " + computerMove);
-    //  console.log("The score is currently " + playerWins + " to " + computerWins + "\n");
-    return [playerWins, computerWins];
-}
 
